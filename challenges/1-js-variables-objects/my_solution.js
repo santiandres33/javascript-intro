@@ -8,7 +8,11 @@
 
 console.log('Yeahh')
 
-var secretNumber = 5
+var secretNumber = 7
+var password = "password"
+var password = 'just open the door'
+var allowedIn = false
+var members = ['Juan','','','German']
 
 
 
