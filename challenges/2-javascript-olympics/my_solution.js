@@ -4,7 +4,17 @@
 
 
 // 0. Objetos
+var Santiago = {
+  name: "santiago",
+  height: "1.73",
+  sport: "athletism"
+}
 
+var Felipe = {
+  name: "felipe",
+  height: "1.70",
+  sport: "soccer"
+}
 
 
 // 1. Añadir propiedades a objetos
@@ -67,6 +77,7 @@ addWinToAthletes([a1,a2], 'Tennis')
 
 
 /////// Pruebas //////////
+var Athlete = {name: "", age: 0, sport: ""}
 var michaelPhelps = new Athlete("Michael Phelps", 29, "swimming")
 console.log(michaelPhelps.constructor === Athlete)
 console.log((michaelPhelps.name + " " + michaelPhelps.sport + " " + michaelPhelps.age) === 'Michael Phelps swimming 29')
