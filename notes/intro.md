@@ -1,5 +1,6 @@
 # Introduction to JavaScript AKA: ECMAscript
 
+
 - Lenguaje pequeño diseñado para ser incluido en diferentes entornos -- como el navegador
 - Provee control programatico sobre el DOM
 - Orientado a Objetos

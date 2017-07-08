@@ -4,57 +4,67 @@
 
 
 // 0. Objetos
-var Santiago = {
+atlet1 = {
   name: "santiago",
-  height: "1.73",
+  height: 1.73,
   sport: "athletism"
 }
 
-var Felipe = {
+atlet2 = {
   name: "felipe",
-  height: "1.70",
+  height: 1.70,
   sport: "soccer"
 }
 
 
 // 1. Añadir propiedades a objetos
 
-a1 = {
-  name: 'fasd',
-  age: 12
-}
+function addWin( arr, event) {
+ arr.forEach ( function(elem){
+  elem.win = function(){ console.log( "${elem.name} won the ${event}")}
+ })
+ }
 
-a2 = {
-  name: 'afsdf',
-  age: 324
-}
+ addWin([atlet1, atlet2], "jog")
 
 
-var name = 'juan'
+// a1 = {
+//   name: 'fasd',
+//   age: 12
+// }
 
-// Function Declaration
-function name() {
-
-}
-
-// Function Expresssion
-var name = function() {
-  console.o
-}
+// a2 = {
+//   name: 'afsdf',
+//   age: 324
+// }
 
 
+// var name = 'juan'
+
+// // Function Declaration
+// function name(athlete) {
+//   athlete.name = 
+
+// }
+
+// // Function Expresssion
+// var name = function() {
+//   console.o
+// }
 
 
-function addWinToAthletes(athletes, event) {
-  athletes.forEach(function(athlete){
-    athlete.win = function() {
-      console.log(`${this.name} won the ${event}`)
-    }
-  })
-}
 
 
-addWinToAthletes([a1,a2], 'Tennis')
+// function addWinToAthletes(athletes, event) {
+//   athletes.forEach(function(athlete){
+//     athlete.win = function() {
+//       console.log(`${this.name} won the ${event}`)
+//     }
+//   })
+// }
+
+
+// addWinToAthletes([a1,a2], 'Tennis')
 
 
 
@@ -77,7 +87,7 @@ addWinToAthletes([a1,a2], 'Tennis')
 
 
 /////// Pruebas //////////
-var Athlete = {name: "", age: 0, sport: ""}
+
 var michaelPhelps = new Athlete("Michael Phelps", 29, "swimming")
 console.log(michaelPhelps.constructor === Athlete)
 console.log((michaelPhelps.name + " " + michaelPhelps.sport + " " + michaelPhelps.age) === 'Michael Phelps swimming 29')
