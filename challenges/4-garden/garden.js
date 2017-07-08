@@ -4,6 +4,12 @@
 // TU CODIGO: Crea un Objeto literal "garden", y funcion constuctora y prototipos para Flower aca.
 //------------------------------------------------------------------------------------------------------------------
 
+var Garden = {
+  name: "Kula Botanical Garden",
+  this.win = function(){}
+}
+
+
 
 //------------------------------------------------------------------------------------------------------------------
 // PRUEBAS: **NO** Cambies nada debajo de esta linea. Tu trabajo es implementar el codigo arriba para hacer que estas pruebas pasen.

@@ -21,7 +21,7 @@ atlet2 = {
 
 function addWin( arr, event) {
  arr.forEach ( function(elem){
-  elem.win = function(){ console.log( "${elem.name} won the ${event}")}
+  elem.win = function(){ console.log( `${elem.name} won the ${event}`)}
  })
  }
 
