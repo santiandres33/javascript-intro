@@ -9,8 +9,6 @@ Cat.prototype.speak = function() {
   console.log(`Miauu ${this.name}`)
 }
 
-
-
 dali.speak()
 
 dali = new Cat({name: 'dali', age: 0})
@@ -20,8 +18,6 @@ dali.cry = function() {
 }
 
 antonia = new Cat({name: 'antonia', age: 3})
-
-
 
 one = {
   one: 1
