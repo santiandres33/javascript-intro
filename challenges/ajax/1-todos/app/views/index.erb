@@ -1,7 +1,8 @@
 <div id="todo">
   <div class="toolbox">
-    <form action="/add_todo" method="post">
-      <input type="text" class="todo" value="Put your todo item here!"/>
+    <form id="form-1" action="/add_todo" method="post">
+    <!-- el campo name es con el que referencia el params del controller -->
+      <input type="text" class="todo" name="todo_content1" value="Put your todo item here!"/>
       <input type="submit" value="Add Todo"/>
       <!-- <button class="add" type="submit">Add Todo</button> -->
     </form>
@@ -11,13 +12,33 @@
 
   </div>
 
-  <div id="todo_template" style="display: none;">
-    <div class="todo">
-      <h2>Todo Name</h2>
-      <ul>
-        <li><a href="#" class="delete">Delete</a></li>
-        <li><a href="#" class="complete">Complete</a></li>
-      </ul>
-    </div>
-  </div>
+
+
+  <table border="1" >
+    <tr>
+      <th> Id</th>
+      <th> Content</th>
+      <th> Accion</th>
+    </tr>
+    <% @todos.each do |todo| %>
+    <%todo.completed == true ? color = "#b5e7a0" : color = "#eca1a6"   %>
+     
+    <tr bgcolor=<%= color %> >
+      <td> <%= todo.id %> </td>
+      <td> <%= todo.todo_content %> </td>
+      <td>      
+       <ul>
+         <li><a href="/todos/<%= todo.id %>/delete" class="delete">Delete</a></li>
+         <li><a href="/todos/<%= todo.id %>/complete  " class="complete">Complete</a></li>
+       </ul>
+     </td>
+   </tr>
+   <% end %>
+ </table>
+
+
+
+
+
+</div>
 </div>
