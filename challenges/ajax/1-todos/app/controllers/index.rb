@@ -20,13 +20,17 @@ end
 get '/todos/:id/delete' do
   new_todo = Todo.find(params[:id])
   new_todo.destroy
-  redirect '/'
+  content_type :json
+  {new_todo: new_todo}.to_json
+  # redirect '/'
 end
 
 get '/todos/:id/complete' do
   new_todo = Todo.find(params[:id])
   new_todo.update(completed: true)
-  redirect '/'
+  content_type :json
+  {new_todo: new_todo}.to_json
+  # redirect '/'
 end
 
 

@@ -14,27 +14,38 @@
 
 
 
-  <table border="1" >
+  <table id="tabla_1" border="1"  cellpadding="0" cellspacing="0" border="0" >
+  
     <tr>
       <th> Id</th>
       <th> Content</th>
       <th> Accion</th>
     </tr>
+    
     <% @todos.each do |todo| %>
     <%todo.completed == true ? color = "#b5e7a0" : color = "#eca1a6"   %>
      
-    <tr bgcolor=<%= color %> >
+    
+    <tr id="<%= todo.id %>" bgcolor=<%= color %> >
       <td> <%= todo.id %> </td>
       <td> <%= todo.todo_content %> </td>
       <td>      
        <ul>
          <li><a href="/todos/<%= todo.id %>/delete" class="delete">Delete</a></li>
-         <li><a href="/todos/<%= todo.id %>/complete  " class="complete">Complete</a></li>
+         <li><a href="/todos/<%= todo.id %>/complete" class="complete">Complete</a></li>
        </ul>
      </td>
    </tr>
+
    <% end %>
  </table>
+
+<!-- follow me template -->
+<div class="made-with-love">
+  Made with
+  <i>♥</i> by
+  <a target="_blank" href="https://codepen.io/nikhil8krishnan">Nikhil Krishnan</a>
+</div>
 
 
 
